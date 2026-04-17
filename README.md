@@ -24,25 +24,6 @@ The pipeline covers the complete workflow:
 
 ---
 
-## 🏗️ Project Structure
-
-```
-project/
-│
-├── ML_final_notebook.ipynb   # Complete pipeline (preprocessing → training → pruning → testing)
-├── dataset/
-│   ├── train/
-│   │    ├── class_1/
-│   │    ├── class_2/
-│   │
-│   ├── test/
-│        ├── class_1/
-│        ├── class_2/
-│
-└── README.md
-```
-
----
 
 ## ⚙️ Tech Stack
 
