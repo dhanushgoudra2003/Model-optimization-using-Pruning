@@ -1,20 +1,149 @@
-This is a ML couse project titled Optimzing DNN's for edge device deployment using Unstructured Pruning.
-This project mainly focuses on improving model's accuracy and reducing the model size while maintaining optimum efficiency.The model was trained on the AHE(Architectural Heritage Elements) dataset.
-https://www.kaggle.com/datasets/ikobzev/architectural-heritage-elements-image64-dataset?resource=download
+# 📊 Image Classification with Model Optimization (Pruning)
+
+## 🚀 Overview
+
+This project builds an efficient **image classification system** using **PyTorch**, combined with **image preprocessing** and **model pruning techniques** to optimize performance and reduce model size.
+
+The pipeline covers the complete workflow:
+
+* Image preprocessing
+* Model training
+* Model pruning (optimization)
+* Model evaluation
+
+---
+
+## 🧠 Key Features
+
+* Automated image preprocessing pipeline
+* Structured dataset handling using ImageFolder
+* Deep learning model training using PyTorch
+* Model pruning for efficiency and compression
+* Evaluation on unseen test data
+* Modular and scalable design
+
+---
+
+## 🏗️ Project Structure
+
+```
+project/
+│
+├── ML_final_notebook.ipynb   # Complete pipeline (preprocessing → training → pruning → testing)
+├── dataset/
+│   ├── train/
+│   │    ├── class_1/
+│   │    ├── class_2/
+│   │
+│   ├── test/
+│        ├── class_1/
+│        ├── class_2/
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Tech Stack
+
+* Python
+* PyTorch
+* Torchvision
+* NumPy
+* PIL (Python Imaging Library)
+
+---
 
 
-Methodology :
-Dataset Preparation: Images resized to 224x224 pixels, normalized, and augmented for consistency and robustness.
-Model Selection: MobileNetV3-Small, a lightweight neural network, used with pretrained weights for transfer learning.
+## 🧹 Preprocessing
 
-Optimization Techniques:
-Unstructured Pruning: Eliminates low-magnitude weights to reduce model size and computational complexity. We pruned 40% of the weights.
-Training: Cross-entropy loss and Adam optimizer with a learning rate scheduler ensure effective training, tracking accuracy and loss.
+The preprocessing pipeline includes:
 
-Architecture used :
-The architecture used for building our model is MobileNet V3 Small.It is a lightweight CNN optimized for mobile and edge devices.
+* Resizing images to **224 × 224**
+* Optional grayscale conversion
+* Normalization for model compatibility
 
+---
 
-Results :
-1) The accuracy of the model increased from 90.74% to 93.87%.
-2) The size of the model reduced from 5.96MB to 3.64MB.
+## 🏋️ Model Training
+
+* Uses **PyTorch DataLoader** for batching
+* Loss Function: **CrossEntropyLoss**
+* Optimizer: **Adam / SGD**
+* Supports GPU acceleration
+
+---
+
+## ✂️ Model Pruning (Optimization)
+
+Model pruning is applied to:
+
+* Reduce model size
+* Improve inference speed
+* Optimize deployment on low-resource devices
+
+### Benefits:
+
+* Faster predictions
+* Lower memory usage
+* Edge-device friendly
+
+---
+
+## 🧪 Model Evaluation
+
+* Tested on unseen dataset
+* Accuracy and performance metrics computed
+* Supports single image prediction
+
+---
+
+## ▶️ How to Run
+
+### 1. Install Dependencies
+
+```bash
+pip install torch torchvision numpy pillow
+```
+
+### 2. Run the Notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```
+ML_code.ipynb
+```
+
+Run all cells step-by-step.
+
+---
+
+## 📈 Future Improvements
+
+* Add training & validation graphs
+* Use transfer learning (ResNet / MobileNet)
+* Handle class imbalance (SMOTE / weighting)
+* Build a web app (Flask / Streamlit)
+* Convert model to ONNX / TensorRT
+
+---
+
+## 🎯 Use Cases
+
+* Medical image classification
+* Plant disease detection
+* Industrial defect detection
+* General multi-class classification problems
+
+---
+
+## 💡 Highlights
+
+* End-to-end ML pipeline
+* Optimization using pruning
+* Practical and deployment-focused
+* Strong real-world applicability
